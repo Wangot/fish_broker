@@ -17,5 +17,8 @@
     "sequelize": "^3.30.2",
     "q": "^1.4.1",
     "accelecore": "^0.1.1"
+  },
+  "devDependencies": {
+    "stylus": ">= 0.17.0"
   }
 }

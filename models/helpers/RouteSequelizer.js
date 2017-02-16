@@ -26,7 +26,17 @@ module.exports = {
 	    });
 
 	    // Update
-	    // router.post(routeUrl +'/:id', require('./update'));
-	    // router.put(routeUrl +'/:id', require('./update'));
+	    var updateFunc = function(req, res){
+	    	model.findById(req.params.id).then(function(obj){
+	    		obj.updateAttributes(req.body).then(function(result){
+	    			obj.reload().then(function(){
+			    		res.renderJsonSuccess(obj);
+	    			})
+	    		});
+	    	})
+	    }
+
+	    router.post(routeUrl +'/:id', updateFunc);
+	    router.put(routeUrl +'/:id', updateFunc);
 	}
 }
