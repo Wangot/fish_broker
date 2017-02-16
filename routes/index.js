@@ -1,5 +1,5 @@
 module.exports = function(app){
-    // app.use('/api', require('./api'));
+    app.use('/api', require('./api'));
 
     // For testing
     app.use('/test', require('./test'));

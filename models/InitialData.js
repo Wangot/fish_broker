@@ -17,10 +17,10 @@ function addUser(userJson, roles){
     var deferred = Q.defer();
     models.User.create(userJson).then(function(user) {
         user.addRole(roles).then(function(){
-            user.createProfile(userJson.Profile).then(function(profile){
-                user.Profile = profile.get({plain: true})
-                deferred.resolve(user);
-            })
+            // user.createProfile(userJson.Profile).then(function(profile){
+            //     user.Profile = profile.get({plain: true})
+            //     deferred.resolve(user);
+            // })
         });
     });
     

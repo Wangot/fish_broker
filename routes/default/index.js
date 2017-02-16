@@ -9,7 +9,8 @@ var models = require(path.resolve("./models/orm"));
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // res.render('index', { title: 'Express' });
+  	// res.render('index', { title: 'Express' });
+
     res.renderLayout('home', { title: 'Express' });
 });
 

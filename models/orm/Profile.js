@@ -26,7 +26,11 @@ module.exports = function(sequelize, DataTypes) {
         },
         address: DataTypes.STRING,
         city: DataTypes.STRING(100),
-        zip_code: DataTypes.STRING(10)
+        zip_code: DataTypes.STRING(10),
+        type: {
+            type: DataTypes.ENUM('USER', 'BROKER', 'FISHING_BOAT', 'EMPLOYEE', 'CREDITOR'),
+            defaultValue: 'CREDITOR'
+        }
     },
     {
         underscored: true,

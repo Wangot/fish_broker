@@ -13,9 +13,8 @@ module.exports = function(sequelize, DataTypes) {
         email: {
             type:  DataTypes.STRING(100),
             unique: true,
-            allowNull: false,
+            allowNull: true,
             validate: {
-                notEmpty: true,
                 isEmail: true
             }
         },
@@ -34,7 +33,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         classMethods: {
         associate: function(models) {
-                User.belongsTo(models.Profile),
+                // User.belongsTo(models.Profile),
                 User.belongsToMany(models.Role, {through: 'user_roles'})
             }
         },
