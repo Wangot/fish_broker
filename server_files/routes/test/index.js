@@ -3,7 +3,7 @@ var router = express.Router();
 
 var Q = require('q');
 var path = require('path');
-var models = require(path.resolve("./models/orm"));
+var models = require(path.resolve("./server_files/models/orm"));
 
 /* GET home page test. */
 router.get('/', function(req, res, next) {

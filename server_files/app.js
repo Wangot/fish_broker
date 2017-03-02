@@ -17,7 +17,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'assets')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // NOTE: Make sure that this is always commented
 /*var initData = require(path.resolve("./models/InitialData"));
@@ -31,7 +31,7 @@ var accelecore = require("accelecore");
 app.use(accelecore.Express.ejs.layout);
 
 // Router
-require(path.resolve("./routes"))(app);
+require(path.resolve("./server_files/routes"))(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
