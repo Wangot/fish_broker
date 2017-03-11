@@ -6,6 +6,10 @@ var MainLayout = require('./components/MainLayout');
 var DashBoard = require('./components/DashBoard');
 var Creditors = require('./components/Creditors');
 
+// Load foundation
+require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css')
+jQuery(document).foundation();
+
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="privatespace" component={MainLayout}>
