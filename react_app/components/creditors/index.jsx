@@ -1,22 +1,19 @@
 var React = require('react');
-var ErrorModal = require('ErrorModal');
+var ModalHelper = require('ModalHelper');
 
 var Creditors = React.createClass({
+	getInitialState: function(){
+		return {
+			errorMessage: undefined
+		}
+	},
 	render: function () {
-		var errorMessage = "hello";
-
-		function renderError () {
-	      if (typeof errorMessage === 'string') {
-	        return (
-	          <ErrorModal message={errorMessage}/>
-	        )
-	      }
-	    }
+		var componentState = this.state;
 
 		return (
 			<div>
 				<p>Hello there Creditor inside</p>
-				{renderError()}
+				{ModalHelper(componentState)}
 			</div>
 		);
 	}

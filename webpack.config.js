@@ -22,7 +22,7 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			ErrorModal: path.resolve(__dirname, './react_app/components/common/ErrorModal.jsx')
+			ModalHelper: path.resolve(__dirname, './react_app/components/common/ModalHelper.jsx')
 		},
 		extensions: ['.js', '.jsx']
 	},
