@@ -4,11 +4,14 @@ var {Route, Router, IndexRoute, browserHistory, hashHistory} = require('react-ro
 
 var MainLayout = require('./components/MainLayout');
 var DashBoard = require('./components/DashBoard');
-var Creditors = require('./components/Creditors');
+var Creditors = require('./components/creditors');
 
 // Load foundation
 require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css')
 jQuery(document).foundation();
+
+// Custom styles
+require('style-loader!css-loader!sass-loader!./styles/app.css')
 
 ReactDOM.render(
   <Router history={browserHistory}>

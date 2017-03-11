@@ -22,7 +22,7 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			//Greeter: path.resolve(__dirname, './assets/js/app/components/Greeter.jsx')
+			ErrorModal: path.resolve(__dirname, './react_app/components/common/ErrorModal.jsx')
 		},
 		extensions: ['.js', '.jsx']
 	},
