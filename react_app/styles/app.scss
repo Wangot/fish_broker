@@ -1,0 +1,12 @@
+@import "base/variables";
+
+// foundation
+//@import "base/foundation-settings";
+//@import "foundation";
+//@include foundation-everything;
+
+.page-title {
+  color: $title-color;
+  margin-top: $space-large;
+  margin-bottom: $space-large;
+}

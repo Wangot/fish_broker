@@ -16,6 +16,13 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING(100),
             defaultValue: ''
         },
+        email: {
+            type:  DataTypes.STRING(100),
+            allowNull: true,
+            validate: {
+                isEmail: true
+            }
+        },
         mobile: {
             type:  DataTypes.STRING(100),
             validate: {
