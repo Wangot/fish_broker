@@ -1,5 +1,6 @@
 var React = require('react');
 var ModalHelper = require('ModalHelper');
+var {Link} = require('react-router');
 var RestApiHelper = require('../common/RestApiHelper');
 
 
@@ -30,11 +31,23 @@ var Creditors = React.createClass({
 
 		var tableBody = Profiles.map((profile) => 
 			<tr key={profile.id}>
-		      <td>{profile.id}</td>
-		      <td>{profile.first_name} {profile.last_name}</td>
+		      <td>
+		      	<Link to={'/privatespace/creditors/'+ profile.id}>
+		      		{profile.id}
+		      	</Link>
+		      </td>
+		      <td>
+		      	<Link to={'/privatespace/creditors/'+ profile.id}>
+		      		{profile.first_name} {profile.last_name}
+		      	</Link>
+		      </td>
 		      <td>Current Balance</td>
 		      <td>{profile.mobile || '-'}</td>
-		      <td>Actions</td>
+		      <td>
+		      	<Link to={'/privatespace/creditors/'+ profile.id}>
+		      		Edit
+		      	</Link>
+		      </td>
 		    </tr>
 		);
 

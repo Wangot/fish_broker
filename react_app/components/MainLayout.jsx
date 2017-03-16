@@ -7,7 +7,7 @@ var MainLayout = React.createClass({
       <div>
         <Nav/>
         <div className="row">
-        	<div className="columns small-center">
+        	<div className="columns medium-10 small-centered">
 	        	{this.props.children}
 	        </div>
 	    </div>

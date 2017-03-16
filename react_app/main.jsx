@@ -9,6 +9,9 @@ var CreditorList = require('./components/creditors/list');
 
 // Load foundation
 require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css')
+require('script-loader!foundation-datepicker/js/foundation-datepicker.js')
+require('style-loader!css-loader!foundation-datepicker/css/foundation-datepicker.css')
+
 jQuery(document).foundation();
 
 // Custom styles
